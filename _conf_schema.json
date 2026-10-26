@@ -1,0 +1,33 @@
+{
+  "enabled": {
+    "type": "bool",
+    "description": "启用贴吧新帖推送",
+    "hint": "关闭后暂停轮询和发送，保留进度与待发送记录。",
+    "default": true
+  },
+  "forum_name": {
+    "type": "string",
+    "description": "监听的贴吧名称",
+    "hint": "填写贴吧的实际名称，例如 python，不要填写网址，也不要额外添加“吧”字。修改贴吧后将重新建立基线，不推送历史帖。",
+    "default": ""
+  },
+  "group_ids": {
+    "type": "list",
+    "description": "接收新帖的 QQ 群号",
+    "hint": "机器人必须已加入这些群。可以配置多个群，每个群独立记录发送结果。",
+    "items": {"type": "string"},
+    "default": []
+  },
+  "platform_id": {
+    "type": "string",
+    "description": "OneBot v11 平台实例 ID",
+    "hint": "对应 AstrBot 消息平台配置中的 ID。只有一个 aiocqhttp 平台时可留空；配置了多个时必须指定。",
+    "default": ""
+  },
+  "poll_interval_seconds": {
+    "type": "int",
+    "description": "新帖检查间隔（秒）",
+    "hint": "默认 60 秒，最少 10 秒。通过轮询实现近实时推送，实际延迟还取决于贴吧接口和网络。保存配置后重载插件生效。",
+    "default": 60
+  }
+}

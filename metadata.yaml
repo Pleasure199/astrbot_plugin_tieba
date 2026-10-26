@@ -1,0 +1,9 @@
+name: astrbot_plugin_tieba
+display_name: 贴吧新帖推送
+desc: 监听指定贴吧的新主题帖，向 OneBot v11 群聊推送标题、发帖人、内容预览和链接。
+version: v1.0.2
+author: Pleasure199
+repo: https://github.com/Pleasure199/astrbot_plugin_tieba
+support_platforms:
+  - aiocqhttp
+astrbot_version: ">=4.16,<5"
